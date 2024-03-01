@@ -15,7 +15,7 @@ def extract_customer_information(filename):
                 name = order.get("name")
                 phone = order.get("phone")
                 if name and phone:
-                    customers[name] = phone
+                    customers[phone] = name
    except FileNotFoundError:
         print("Error: File not found.")
    except json.JSONDecodeError:
